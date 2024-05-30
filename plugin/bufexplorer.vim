@@ -526,6 +526,7 @@ function! s:MapKeys()
     nnoremap <script> <silent> <nowait> <buffer> F             :call <SID>SelectBuffer("split", "st")<CR>
     nnoremap <script> <silent> <nowait> <buffer> m             :call <SID>MRUListShow()<CR>
     nnoremap <script> <silent> <nowait> <buffer> o             :call <SID>SelectBuffer()<CR>
+    nnoremap <script> <silent> <nowait> <buffer> l             :call <SID>SelectBuffer()<CR>
     nnoremap <script> <silent> <nowait> <buffer> p             :call <SID>ToggleSplitOutPathName()<CR>
     nnoremap <script> <silent> <nowait> <buffer> q             :call <SID>Close()<CR>
     nnoremap <script> <silent> <nowait> <buffer> r             :call <SID>SortReverse()<CR>
@@ -640,7 +641,7 @@ function! s:CreateHelp()
         call add(header, '" Buffer Explorer ('.g:bufexplorer_version.')')
         call add(header, '" --------------------------')
         call add(header, '" <F1> : toggle this help')
-        call add(header, '" <enter> or o or Mouse-Double-Click : open buffer under cursor')
+        call add(header, '" <enter> or o or Mouse-Double-Click or l: open buffer under cursor')
         call add(header, '" <shift-enter> or t : open buffer in another tab')
         call add(header, '" a : toggle find active buffer')
         call add(header, '" b : Fast buffer switching with b<any bufnum>')
